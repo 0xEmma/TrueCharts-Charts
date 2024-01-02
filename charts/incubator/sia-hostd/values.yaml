@@ -1,0 +1,58 @@
+image:
+  pullPolicy: IfNotPresent
+  repository: ghcr.io/siafoundation/hostd
+  tag: master@sha256:2ac978712144360157d8f1fda9efdee2114510156fcc65b94970c264acc228d6
+persistence:
+  datadirectory:
+    enabled: true
+    mountPath: /data
+  storagedirectory:
+    enabled: true
+    mountPath: /storage
+portal:
+  open:
+    enabled: true
+securityContext:
+  container:
+    readOnlyRootFilesystem: false
+    runAsGroup: 0
+    runAsUser: 0
+service:
+  consensusport:
+    enabled: true
+    ports:
+      consensusport:
+        enabled: true
+        port: 9981
+        protocol: tcp
+        targetPort: 9981
+  hostrhp2port:
+    enabled: true
+    ports:
+      hostrhp2port:
+        enabled: true
+        port: 9982
+        protocol: tcp
+        targetPort: 9982
+  hostrhp3port:
+    enabled: true
+    ports:
+      hostrhp3port:
+        enabled: true
+        port: 9983
+        protocol: tcp
+        targetPort: 9983
+  main:
+    ports:
+      main:
+        port: 9980
+        protocol: tcp
+        targetPort: 9980
+workload:
+  main:
+    podSpec:
+      containers:
+        main:
+          env:
+            HOSTD_API_PASSWORD: ""
+            HOSTD_SEED: ""

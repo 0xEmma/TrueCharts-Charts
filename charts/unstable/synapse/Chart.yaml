@@ -1,7 +1,7 @@
 kubeVersion: ">=1.24.0-0"
 apiVersion: v2
 name: synapse
-version: 9.0.10
+version: 9.0.12
 appVersion: 1.95.1
 description: A Helm chart to deploy a Matrix homeserver stack into Kubernetes
 home: https://truecharts.org/charts/incubator/synapse
@@ -20,7 +20,7 @@ keywords:
   - synapse
 dependencies:
   - name: common
-    version: 17.2.18
+    version: 17.2.21
     repository: oci://tccr.io/truecharts
     condition: ""
     alias: ""

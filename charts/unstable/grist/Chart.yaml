@@ -1,15 +1,15 @@
 kubeVersion: ">=1.24.0-0"
 apiVersion: v2
 name: grist
-version: 9.0.9
-appVersion: 1.1.7
+version: 9.0.12
+appVersion: 1.1.10
 description: Grist is a modern relational spreadsheet. It combine the flexibility of a spreadsheet with the robustness of a database to organize your data.
 home: https://truecharts.org/charts/incubator/grist
 icon: https://truecharts.org/img/hotlink-ok/chart-icons/grist.png
 deprecated: false
 sources:
-  - https://github.com/gristlabs/grist-core
   - https://support.getgrist.com/
+  - https://github.com/gristlabs/grist-core
   - https://github.com/truecharts/charts/tree/master/charts/incubator/grist
   - https://hub.docker.com/r/gristlabs/grist
 maintainers:
@@ -22,7 +22,7 @@ keywords:
   - database
 dependencies:
   - name: common
-    version: 17.2.18
+    version: 17.2.21
     repository: oci://tccr.io/truecharts
     condition: ""
     alias: ""

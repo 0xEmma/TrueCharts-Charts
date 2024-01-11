@@ -1,7 +1,7 @@
 image:
-  repository: tccr.io/truecharts/automatic-ripping-machine
+  repository: automaticrippingmachine/automatic-ripping-machine
   pullPolicy: IfNotPresent
-  tag: v2.6.60@sha256:bf79fee03b4ef8867ccbee6448748bf58b86a59c2400dd9beb5a4b926c6e7c10
+  tag: 2.6.67@sha256:ba664713e7d23e8d489d169ca955aec93b5b86d74b6b92279ffe575d14a99c89
 
 securityContext:
   container:

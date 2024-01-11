@@ -51,22 +51,6 @@ service:
 workload:
   main:
     podSpec:
-      initContainers:
-        - name: download-consensus-db # This will download the blockchain consensus file, making the node spinning up significantly faster
-          image: alpine:latest 
-          command: ["/bin/sh", "-c"]
-          args:
-          - |
-            if [ ! -f /data/consensus/consensus.db ]; then
-              apk add --no-cache curl unzip
-              cd /data/consensus
-              curl -LO https://cdn.siacentral.com/bootstraps/siad/mainnet/450961.zip
-              unzip 450961.zip
-              rm 450961.zip
-            fi
-          volumeMounts:
-          - name: data-volume
-            mountPath: /data/consensus
       containers:
         main:
           env:
